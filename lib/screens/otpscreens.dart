@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markstudentshousing/core/constants/constants.dart';
 import 'package:markstudentshousing/screens/loginscreens.dart';
+import 'package:markstudentshousing/screens/profilescreen.dart';
 import 'package:markstudentshousing/sharedwidgets/elevatedbutton.dart';
 import 'package:pinput/pinput.dart';
 
@@ -97,7 +98,15 @@ class Verificationscreen extends StatelessWidget {
             ksizedheight,
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: CustomElevatedButton(text: "Continue", onPressed: () {}),
+              child: CustomElevatedButton(
+                text: "Continue",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()),
+                  );
+                },
+              ),
             ),
             ksizedheight20,
             Row(
